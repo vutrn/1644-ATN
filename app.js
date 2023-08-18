@@ -7,8 +7,8 @@ var hbs = require("hbs");
 
 //! CREATE ROUTER
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
 var legoRouter = require("./routes/lego")
+var figureRouter = require("./routes/figure")
 
 var app = express();
 
@@ -42,8 +42,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //! USE ROUTER
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/lego", legoRouter);
+app.use("/figure", figureRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

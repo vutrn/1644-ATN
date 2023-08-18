@@ -2,39 +2,64 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(251, 251, 95);
+  background: #fbfb5f;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 70px;
   z-index: 100;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .left-section a {
   text-decoration: none;
   color: black;
   font-size: 23px;
-  font-family: 'Gill Sans', 'Gill Sans MT';
+  font-family: "ADLaM Display", "Gill Sans MT";
 }
 
-.left-section a:hover{
+.left-section a:hover {
   opacity: 0.5;
 }
 
+/* ---------------------------------------------------------- */
+
 .middle-section {
   display: flex;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: pink;
+}
+
+.middle-section i {
+  padding-left: 10px;
 }
 
 .search-bar {
+  outline: none;
+  border: none;
+  background-color: transparent;
   flex: 1;
   width: 500px;
   height: 40px;
-  border: 1px solid black;
-  border-radius: 5px;
+  padding-left: 10px;
 }
 
-.search-bar::before {
-  content: "";
+/* ---------------------------------------------------------- */
+
+.add-button {
+  background: #3aff3a !important;
+  border: 2px solid black !important;
+  box-shadow: 3px 3px 0 black;
+  transition: none !important;
 }
+
+.add-button:active{
+  box-shadow: none;
+  position: relative;
+  right: -3px;
+  bottom: -3px;
+}
+

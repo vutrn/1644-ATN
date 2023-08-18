@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    {{!-- Categories --}}
+    <div class="col-md-3">
+      <div class="category-list">
+        <strong>Category</strong>
+        <ul>
+          <li>
+            <a class="category-link" href="">asdasdad</a>
+          </li>
+          <li>
+            <a class="category-link" href="">asdasdad</a>
+          </li>
+          <li>
+            <a class="category-link" href="">asdasdad</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {{!-- Products list --}}
+    <div class="col-md-9">
+      <div class="row">
+        {{#each figure }}
+        <div class="card product-container col-12 col-md-6 col-lg-3">
+          {{!--Product image link --}}
+          <a class="product-link" href="/figure/detail/{{_id}}">
+            <div class="">
+              <img class="product-image" src="{{image}}">
+              <div class="product-info">
+                <p class="product-title">{{ name }}</p>
+                <p class="product-price">${{ price }}</p>
+              </div>
+            </div>
+          </a>
+          {{!-- Edit / Delete button --}}
+          <div class="button-section">
+            <button class="edit-button"><i class="fa-regular fa-pen-to-square"></i>Edit</button>
+            <button class="delete-button"><i class="fa-solid fa-trash"></i>Delete</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

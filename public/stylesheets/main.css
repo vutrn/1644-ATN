@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Varela+Round&display=swap');
 * {
   /* height: 100vh; */
-  font-family: "roboto slab", sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 main {
@@ -22,9 +23,10 @@ ul li {
 
 /* ------------------------------------------------------ */
 
-.category-list {
-  list-style-type: disc;
-  list-style-position: inside;
+.category-list strong {
+  /* list-style-type: disc;
+  list-style-position: inside; */
+  font-size: 25px;
 }
 
 .category-link {
@@ -38,7 +40,7 @@ ul li {
   transition: all 0.25s;
 }
 
-.category-link:hover{
+.category-link:hover {
   background: black;
   color: white;
 }
@@ -60,13 +62,13 @@ ul li {
 .product-link {
   border-bottom: 2px solid black;
   text-decoration: none;
-  
 }
 
 .product-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-bottom: 2px solid black;
 }
 
 .product-info {
@@ -86,7 +88,9 @@ ul li {
 }
 
 .product-price {
+  display: inline-block;
   color: black;
+  background: #80008052;
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 20px;

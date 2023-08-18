@@ -16,32 +16,78 @@
 </head>
 
 <body>
-  {{!-- HEADER SECTION --}}
-  <nav class="container-fluid" id="header">
+  {{!--! HEADER SECTION --}}
+  <header class="container-fluid" id="header">
     {{!-- Left side --}}
     <section class="left-section">
       <a href="/">
         <i class="fa-solid fa-cubes fa-xl"></i>
-        Kiddify
+        Toytopia
       </a>
     </section>
     {{!-- Middle side --}}
     <section class="middle-section">
+      <i class="fa-solid fa-magnifying-glass"></i>
       <input class="search-bar" type="search" name="keyword" placeholder="Search products" required>
     </section>
     {{!-- Right side --}}
     <section class="right-section">
-      asd
+      <a class="btn add-button" href="/student/add">
+        <i class="fa-solid fa-square-plus"></i>
+        Add a product
+      </a>
     </section>
-  </nav>
+  </header>
 
-  {{!-- MAIN SECTION --}}
+  {{!--! MAIN SECTION --}}
   <main>
     {{{body}}}
   </main>
 
-  {{!-- FOOTER SECTION --}}
-  {{>footer}}
+  {{!--! FOOTER SECTION --}}
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-12 col-md-8">
+          <h6>Toytopia</h6>
+          <p class="text-justify">Toytopia is the ultimate e-commerce destination for all your shopping needs. With a
+            vast selection of products from various categories, we offer competitive prices, reliable shipping, and
+            exceptional customer service. Shop with us today and experience the convenience of stress-free online
+            shopping.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">All Product</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+            <a href="#">Toytopia</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
