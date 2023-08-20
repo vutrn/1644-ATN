@@ -1,0 +1,62 @@
+<div class="container">
+  <a class="return-link" href="/lego" onclick="return confirm('The progress will not be saved!');">
+    <i class="fa-solid fa-chevron-left"></i>
+    Return
+  </a>
+  <hr>
+</div>
+<div class="container col-md-6" id="add-product-container">
+  <div class="row">
+    <form action="/lego/add" method="post">
+    
+      <h1 class="text text-center mt-3">Add new lego</h1>
+
+      <div class="mt-3">
+        <label class="h5 text">Name</label>
+        <input class="form-control" type="text" name="name" required>
+      </div>
+
+      <div class="mt-3">
+        <label class="h5 text">Price</label>
+        <input class="form-control" type="number" name="price" min="1" required>
+      </div>
+
+      <div class="mt-3">
+        <label class="h5 text">Quantity</label>
+        <input class="form-control" type="number" name="quantity" min="1" required>
+      </div>
+
+      <div class="mt-3">
+        <label class="h5 text">Image (URL)</label>
+        <input class="form-control" type="text" name="image" required>
+      </div>
+
+      <div class="mt-3">
+        <label class="h5 text">Category</label>
+        <input class="form-control" type="text" name="category" value="Lego" readonly>
+      </div>
+
+      <div class="mt-3">
+        <label class="h5 text">Description</label>
+        <input class="form-control" type="text" name="description" required>
+      </div>
+
+      <div class="text-center my-3">
+        <input class="add-button px-5 text-xl" type="submit" value="ADD">
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<style>
+  .return-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+  }
+  #add-product-container {
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+</style>
