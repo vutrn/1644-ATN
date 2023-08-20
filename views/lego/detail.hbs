@@ -1,0 +1,79 @@
+<div class="container" id="product-detail">
+  <a class="return-link" href="/lego">
+    <i class="fa-solid fa-chevron-left"></i>
+    Return
+  </a>
+  <hr>
+  <div class="row">
+    <div class="col-md-7" id="product-info">
+      <p class="product-title" >
+        {{lego.name}}
+      </p>
+      <p class="product-price">
+        ${{lego.price}}
+      </p>
+      <p>
+        Quantity: {{lego.quantity}}
+      </p>
+      <p>
+        Category: {{lego.category}}
+      </p>
+      <h6>About the product</h6>
+      <p>
+        {{lego.description}}
+      </p>
+      <div class="button-section">
+        <a class="edit-button" href="/lego/edit/{{_id}}"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+        <a class="delete-button" href="/lego/delete/{{_id}}"><i class="fa-solid fa-trash"></i>Delete</a>
+      </div>
+    </div>
+    <div class="image-container col-md-5">
+      <img src="{{lego.image}}" width="300px">
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-title {
+    font-size: 35px;
+    font-weight: bold;
+    height: 50px;
+  }
+  #product-detail {
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+   #product-info h6 {
+    display: inline-block;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(170, 170, 170);
+  }
+
+  .return-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid rgb(171, 171, 171);
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .button-section a {
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none !important;
+  }
+
+</style>

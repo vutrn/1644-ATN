@@ -1,0 +1,54 @@
+<div class="container">
+  <a class="return-link" href="/figure">
+    <i class="fa-solid fa-chevron-left"></i>
+    Return
+  </a>
+  <hr>
+  <div class="row">
+
+    {{#each figures }}
+    <div class="card product-container col-12 col-md-6 col-lg-3">
+      {{!--Product image link --}}
+      <a class="product-link" href="/figure/detail/{{_id}}">
+        <img class="product-image" src="{{image}}">
+        <div class="product-info">
+          <p class="product-title">{{ name }}</p>
+          <p class="product-price">${{ price }}</p>
+        </div>
+      </a>
+      {{!-- Edit / Delete button --}}
+      <div class="button-section">
+        <a class="edit-button" href="/figure/edit/{{_id}}"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+        <a class="delete-button" href="/figure/delete/{{_id}}"><i class="fa-solid fa-trash"></i>Delete</a>
+      </div>
+    </div>
+    {{/each}}
+
+    {{#each legos }}
+    <div class="card product-container col-12 col-md-6 col-lg-3">
+      {{!--Product image link --}}
+      <a class="product-link" href="/figure/detail/{{_id}}">
+        <img class="product-image" src="{{image}}">
+        <div class="product-info">
+          <p class="product-title">{{ name }}</p>
+          <p class="product-price">${{ price }}</p>
+        </div>
+      </a>
+      {{!-- Edit / Delete button --}}
+      <div class="button-section">
+        <a class="edit-button" href="/lego/edit/{{_id}}"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+        <a class="delete-button" href="/lego/delete/{{_id}}"><i class="fa-solid fa-trash"></i>Delete</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+</div>
+
+<style>
+  .return-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+  }
+</style>

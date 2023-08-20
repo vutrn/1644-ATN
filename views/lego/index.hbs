@@ -6,13 +6,10 @@
         <strong>Category</strong>
         <ul>
           <li>
-            <a class="category-link" href="">asdasdad</a>
+            <a class="category-link" href="/figure">Figure</a>
           </li>
           <li>
-            <a class="category-link" href="">asdasdad</a>
-          </li>
-          <li>
-            <a class="category-link" href="">asdasdad</a>
+            <a class="category-link" href="/lego">Lego</a>
           </li>
         </ul>
       </div>
@@ -23,19 +20,17 @@
         {{#each lego }}
         <div class="card product-container col-12 col-md-6 col-lg-3">
           {{!--Product image link --}}
-          <a class="product-link" href="">
-            <div class="">
-              <img class="product-image" src="{{image}}">
-              <div class="product-info">
-                <p class="product-title">{{ name }}</p>
-                <p class="product-price">${{ price }}</p>
-              </div>
+          <a class="product-link" href="/lego/detail/{{_id}}">
+            <img class="product-image" src="{{image}}">
+            <div class="product-info">
+              <p class="product-title">{{ name }}</p>
+              <p class="product-price">${{ price }}</p>
             </div>
           </a>
           {{!-- Edit / Delete button --}}
           <div class="button-section">
-            <button class="edit-button"><i class="fa-regular fa-pen-to-square"></i>Edit</button>
-            <button class="delete-button"><i class="fa-solid fa-trash"></i>Delete</button>
+            <a class="edit-button" href="/lego/edit/{{_id}}"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+            <a class="delete-button" href="/lego/delete/{{_id}}"><i class="fa-solid fa-trash"></i>Delete</a>
           </div>
         </div>
         {{/each}}

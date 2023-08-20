@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/stylesheets/header.css">
   <link rel='stylesheet' href='/stylesheets/main.css' />
   <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="/stylesheets/product-detail.css">
   {{!--
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> --}}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -28,14 +29,29 @@
     {{!-- Middle side --}}
     <section class="middle-section">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input class="search-bar" type="search" name="keyword" placeholder="Search products" required>
+      <form action="/figure/search" method="post">
+        <input class="search-bar" type="search" name="keyword" placeholder="Search products" required>
+      </form>
     </section>
     {{!-- Right side --}}
     <section class="right-section">
-      <a class="btn add-button" href="/student/add">
+      <button class="add-button" id="optionsButton">
         <i class="fa-solid fa-square-plus"></i>
         Add a product
-      </a>
+      </button>
+      <div id="overlay">
+        <div id="optionsBox">
+          <p>Select a category:</p>
+          <ul>
+            <li>
+              <a class="category-link" href="/lego/add">Lego</a>
+            </li>
+            <li>
+              <a class="category-link" href="/figure/add">Figure</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </header>
 
@@ -51,7 +67,7 @@
 
         <div class="col-sm-12 col-md-8">
           <h6>Toytopia</h6>
-          <p class="text-justify">Toytopia is the ultimate e-commerce destination for all your shopping needs. With a
+          <p>Toytopia is the ultimate e-commerce destination for all your shopping needs. With a
             vast selection of products from various categories, we offer competitive prices, reliable shipping, and
             exceptional customer service. Shop with us today and experience the convenience of stress-free online
             shopping.</p>
@@ -88,6 +104,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="/javascripts/script.js"></script>
 </body>
 
 </html>
