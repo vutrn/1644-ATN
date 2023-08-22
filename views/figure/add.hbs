@@ -31,9 +31,20 @@
         <input class="form-control" type="text" name="image" required>
       </div>
 
-      <div class="mt-3">
+      {{!-- <div class="mt-3">
         <label class="h5 text">Category</label>
         <input class="form-control" type="text" name="category" value="Figure" readonly>
+      </div> --}}
+
+      <div class="mt-3">
+        <label class="h5 text">Category</label>
+        <select name="category">
+          {{#each category }}
+          <option value="{{name}}">
+            {{name}}
+          </option>
+          {{/each}}
+        </select>
       </div>
 
       <div class="mt-3">
@@ -49,12 +60,27 @@
   </div>
 </div>
 
+
+{{!--
+<div class="mt-3">
+  Red<input type="radio" name="color" value="Red">
+  Blue<input type="radio" name="color" value="Blue">
+</div> --}}
+
+{{!-- <div class="mt-3">
+  <select name="color">
+    <option value="Blue">Blue</option>
+    <option value="Red">Red</option>
+  </select>
+</div> --}}
+
 <style>
   .return-link {
     text-decoration: none;
     color: #000;
     font-size: 20px;
   }
+
   #add-product-container {
     border: 2px solid black;
     border-radius: 10px;

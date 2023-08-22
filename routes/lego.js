@@ -1,6 +1,7 @@
 var express = require("express");
 const FigureModel = require("../models/FigureModel");
 const LegoModel = require("../models/LegoModel");
+const CategoryModel = require("../models/CategoryModel");
 var router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -11,6 +12,7 @@ router.get("/", async (req, res) => {
 
 router.get("/detail/:id", async (req, res) => {
   const lego = await LegoModel.findById(req.params.id);
+
   res.render("lego/detail", { lego });
 });
 

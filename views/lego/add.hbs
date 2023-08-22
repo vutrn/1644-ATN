@@ -8,7 +8,7 @@
 <div class="container col-md-6" id="add-product-container">
   <div class="row">
     <form action="/lego/add" method="post">
-    
+
       <h1 class="text text-center mt-3">Add new lego</h1>
 
       <div class="mt-3">
@@ -31,9 +31,19 @@
         <input class="form-control" type="text" name="image" required>
       </div>
 
-      <div class="mt-3">
+      {{!-- <div class="mt-3">
         <label class="h5 text">Category</label>
         <input class="form-control" type="text" name="category" value="Lego" readonly>
+      </div> --}}
+      <div class="mt-3">
+        <label class="h5 text">Category</label>
+        <select name="category">
+          {{#each category }}
+          <option value="{{name}}">
+            {{name}}
+          </option>
+          {{/each}}
+        </select>
       </div>
 
       <div class="mt-3">
@@ -55,6 +65,7 @@
     color: #000;
     font-size: 20px;
   }
+
   #add-product-container {
     border: 2px solid black;
     border-radius: 10px;

@@ -7,6 +7,7 @@ var FigureSchema = mongoose.Schema({
   image: String,
   category: String,
   description: String,
+  
 });
 
 //* model('ten-tuỳ-ý', 'schema', 'collection')

@@ -22,9 +22,11 @@
       <p style="word-wrap: break-word;">
         {{figure.description}}
       </p>
+      
       <div class="button-section">
         <a class="edit-button" href="/figure/edit/{{figure._id}}"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
-        <a class="delete-button" href="/figure/delete/{{figure._id}}" onclick="return confirm('Are you sure to delete this item?')"><i class="fa-solid fa-trash"></i>Delete</a>
+        <a class="delete-button" href="/figure/delete/{{figure._id}}"
+          onclick="return confirm('Are you sure to delete this item?')"><i class="fa-solid fa-trash"></i>Delete</a>
       </div>
     </div>
     <div class="image-container col-md-5">

@@ -1,24 +1,29 @@
 var express = require("express");
 const FigureModel = require("../models/FigureModel");
 const LegoModel = require("../models/LegoModel");
+const CategoryModel = require("../models/CategoryModel");
+
 var router = express.Router();
 
 /* GET home page. */
 router.get("/", async (req, res) => {
   var figure = await FigureModel.find();
-  //  res.send(figure);
-  res.render("figure/index", { figure });
+  var category = await CategoryModel.find();
+  //  res.send(category);
+  res.render("figure/index", { figure, category });
 });
 
 router.get("/detail/:id", async (req, res) => {
   const figure = await FigureModel.findById(req.params.id);
-  res.render("figure/detail", { figure });
+  var category = await CategoryModel.find();
+  res.render("figure/detail", { figure,  category});
 });
 
 // ----------------------------------------------------------------------------
 
-router.get("/add", (req, res) => {
-  res.render("figure/add");
+router.get("/add", async (req, res) => {
+  var category = await CategoryModel.find();
+  res.render("figure/add", {category});
 });
 
 //nhận & xử lý dữ liệu từ form ADD
